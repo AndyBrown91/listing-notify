@@ -3,7 +3,7 @@ name: Run notify
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * 1"
+    - cron: "0 12 * * 1,3,5"
 
 env:
   DB_URI: ${{ secrets.DB_URI }}
