@@ -5,6 +5,11 @@ on:
   schedule:
     - cron: "0 12 * * 1"
 
+env:
+  DB_URI: ${{ secrets.DB_URI }}
+  URL: ${{ secrets.DB_URL }}
+
+
 jobs:
   Notify:
     runs-on: ubuntu-latest
