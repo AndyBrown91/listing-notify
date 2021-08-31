@@ -1,0 +1,21 @@
+name: Run notify
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * 1"
+
+jobs:
+  Notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Install python modules
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run script
+        run: |
+          python ./notify.py
