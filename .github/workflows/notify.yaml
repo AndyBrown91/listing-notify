@@ -7,8 +7,7 @@ on:
 
 env:
   DB_URI: ${{ secrets.DB_URI }}
-  URL: ${{ secrets.DB_URL }}
-
+  URL: ${{ secrets.URL }}
 
 jobs:
   Notify:
